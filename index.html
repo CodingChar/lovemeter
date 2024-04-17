@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoveMeter</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>LoveMeter</h1>
+        <h2>let's see how you/they get along with him/her</h2>
+      </header>
+      <div class="container">
+        <div class="partners">
+          <div>
+            <input type="text" class="partner-input" name="partner-1" />
+          </div>
+          <div>
+            <input type="text" class="partner-input" name="partner-2" />
+          </div>
+          <div>
+            <button class="result-btn">Show me how</button>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat love">
+            <div class="stat-title">
+              <span>Love/Interests</span>
+            </div>
+            <div class="stat-info">
+              <i class="fa-solid fa-heart"></i>
+              <span class="percent">85%</span>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-bar">
+              <div class="outside">
+                <div class="inside"></div>
+              </div>
+            </div>
+          </div>
+          <div class="stat chemistry">
+            <div class="stat-title">
+              <span>Chemistry</span>
+            </div>
+            <div class="stat-info">
+              <i class="fa-solid fa-heart"></i>
+              <span class="percent">50%</span>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-bar">
+              <div class="outside">
+                <div class="inside"></div>
+              </div>
+            </div>
+          </div>
+          <div class="stat tension">
+            <div class="stat-title">
+              <span>Tension</span>
+            </div>
+            <div class="stat-info">
+              <i class="fa-solid fa-heart"></i>
+              <span class="percent">50%</span>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-bar">
+              <div class="outside">
+                <div class="inside"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

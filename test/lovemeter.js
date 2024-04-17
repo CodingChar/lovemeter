@@ -50,7 +50,7 @@ function partnerEval(partners, results) {
   default_case = {
     chemistry: 0,
     tension: 0,
-    interests: 0,
+    love: 0,
     overall: 0,
   };
 
@@ -73,12 +73,13 @@ function partnerEval(partners, results) {
   result = { source: "randomizer" };
 
   result.partners = partners;
-  result.interests = random(100);
-  result.chemistry = result.interests+random(100-result.interests) 
+  result.love = random(100);
+  result.chemistry = result.love+random(100-result.love) 
   result.tension = result.chemistry+random(100-result.chemistry);
-  let { interests, chemistry, tension } = result;
-  result.overall = +((interests + chemistry + tension) / 3).toFixed(2);
+  let { love, chemistry, tension } = result;
+  result.overall = +((love + chemistry + tension) / 3).toFixed(2);
   return result;
+
 }
 
 function test(func, args, t){
