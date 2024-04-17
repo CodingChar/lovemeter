@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" type="image/x-icon" href="heart.png">
   </head>
   <body>
     <main>
@@ -22,10 +23,19 @@
       <div class="container">
         <div class="partners">
           <div>
-            <input type="text" class="partner-input" name="partner-1" />
-          </div>
-          <div>
-            <input type="text" class="partner-input" name="partner-2" />
+            <input
+              type="text"
+              class="partner-input"
+              name="partner-1"
+              placeholder="A Soul: "
+            />
+
+            <input
+              type="text"
+              class="partner-input"
+              name="partner-2"
+              placeholder="For Another Soul: "
+            />
           </div>
           <div>
             <button class="result-btn">Show me how</button>
@@ -38,12 +48,12 @@
             </div>
             <div class="stat-info">
               <i class="fa-solid fa-heart"></i>
-              <span class="percent">85%</span>
+              <span class="percent" id="love-percent">85%</span>
               <i class="fa-solid fa-heart"></i>
             </div>
             <div class="stat-bar">
               <div class="outside">
-                <div class="inside"></div>
+                <div class="inside" id="love-bar"></div>
               </div>
             </div>
           </div>
@@ -53,12 +63,12 @@
             </div>
             <div class="stat-info">
               <i class="fa-solid fa-heart"></i>
-              <span class="percent">50%</span>
+              <span class="percent" id="chemistry-id">50%</span>
               <i class="fa-solid fa-heart"></i>
             </div>
             <div class="stat-bar">
               <div class="outside">
-                <div class="inside"></div>
+                <div class="inside" id="chemistry-bar"></div>
               </div>
             </div>
           </div>
@@ -68,15 +78,23 @@
             </div>
             <div class="stat-info">
               <i class="fa-solid fa-heart"></i>
-              <span class="percent">50%</span>
+              <span class="percent" id="tension-percent">50%</span>
               <i class="fa-solid fa-heart"></i>
             </div>
             <div class="stat-bar">
               <div class="outside">
-                <div class="inside"></div>
+                <div class="inside" id="tension-bar"></div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="overall-container">
+          <h2>OVERALL</h2>
+          <h3 id="couple">Subject With Subject</h3>
+          <p class="phrase" id="phrase">
+            Lorem ipsum, dolor sit amet consectetur adipisicing
+          </p>
+          <span class="overall" id="overall">80%</span>
         </div>
       </div>
     </main>
