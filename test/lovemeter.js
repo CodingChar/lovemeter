@@ -8,19 +8,16 @@
     Tension,
     Comun Interest  
 
-
-
 */
 
 function random(x) {
   return Math.floor(Math.random() * x);
 }
 
-let example_data = ["subject1", "subject2"];
 let results = [
   {
-    partners: example_data,
-    stats:{},
+    partners: ["subject1", "subject2"],
+    stats: {},
     calcStats: function () {
       this.stats.chemistry = 85 + random(15);
       this.stats.tension = 50 + random(50);
@@ -54,35 +51,44 @@ function partnerEval(partners, results) {
     chemistry: 0,
     tension: 0,
     interests: 0,
-    overall: 0
-  }
+    overall: 0,
+  };
 
   //2-> verify if they exists in the results
 
   let resultsFound = results.find(
-    ({ partners }) => partners[0] === p1 || partners[1] === p2
+    ({ partners }) => partners[0] === p1 && partners[1] === p2
+    || partners[1] === p1 && partners[0] === p2
   );
-  if(resultsFound){
-    resultsFound?.calcStats()
-    resultsFound.stats.overall = +resultsFound.stats.overall.toFixed(2)
-    resultsFound.stats.source = 'results-list'
-    return resultsFound.stats ? resultsFound.stats : default_case
+  if (resultsFound) {
+    resultsFound.stats.partners = resultsFound.partners;
+    resultsFound?.calcStats();
+    resultsFound.stats.overall = +resultsFound.stats.overall.toFixed(2);
+    resultsFound.stats.source = "results-list";
+    return resultsFound.stats ? resultsFound.stats : default_case;
   }
 
   //otherwise 3 -> return a random result
-  
-  result  = {source: 'randomizer'}
 
-  result.interests = random(100)
-  result.chemistry = 100-random(100-result.interests)
-  result.tension = 100-random(100-result.chemistry)
-  let {interests, chemistry, tension} = result
-  result.overall = (interests+chemistry+tension)/3
-  return overall
+  result = { source: "randomizer" };
+
+  result.partners = partners;
+  result.interests = random(100);
+  result.chemistry = result.interests+random(100-result.interests) 
+  result.tension = result.chemistry+random(100-result.chemistry);
+  let { interests, chemistry, tension } = result;
+  result.overall = +((interests + chemistry + tension) / 3).toFixed(2);
+  return result;
 }
 
+function test(func, args, t){
+  for(let i=0; i<t; i++){
+    let res = func(args[0], args[1])
+    console.log(res)
+  }
+}
 
+let example_data = ["subject1", "subject"];
+let output = partnerEval(example_data, results);
 
-let output = partnerEval(example_data, results)
-
-console.log(output)
+test(partnerEval, [example_data, results], 100)
