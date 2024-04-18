@@ -17,38 +17,38 @@
   <body>
     <main>
       <header>
-        <h1>LoveMeter</h1>
-        <h2>let's see how you/they get along with him/her</h2>
+        <h1>Medidor de Amor</h1>
+        <h2>Descubre cuanta conexion y amor hay entre ustedes!</h2>
       </header>
-      <div class="container">
         <div class="partners">
           <div>
             <input
               type="text"
               class="partner-input"
-              name="partner-1"
-              placeholder="A Soul: "
+              id="partner-1"
+              placeholder="Un Alma"
             />
 
             <input
               type="text"
               class="partner-input"
-              name="partner-2"
-              placeholder="For Another Soul: "
+              id="partner-2"
+              placeholder="Para otra Alma"
             />
           </div>
           <div>
-            <button class="result-btn">Show me how</button>
+            <button class="result-btn">Muestrame que tanto.</button>
           </div>
         </div>
+        <div class="container">
         <div class="stats">
           <div class="stat love">
             <div class="stat-title">
-              <span>Love/Interests</span>
+              <span>Amor e Intereses</span>
             </div>
             <div class="stat-info">
               <i class="fa-solid fa-heart"></i>
-              <span class="percent" id="love-percent">85%</span>
+              <span class="percent" id="love-percent">10%</span>
               <i class="fa-solid fa-heart"></i>
             </div>
             <div class="stat-bar">
@@ -59,11 +59,11 @@
           </div>
           <div class="stat chemistry">
             <div class="stat-title">
-              <span>Chemistry</span>
+              <span>Quimica</span>
             </div>
             <div class="stat-info">
               <i class="fa-solid fa-heart"></i>
-              <span class="percent" id="chemistry-id">50%</span>
+              <span class="percent" id="chemistry-percent">10%</span>
               <i class="fa-solid fa-heart"></i>
             </div>
             <div class="stat-bar">
@@ -74,11 +74,11 @@
           </div>
           <div class="stat tension">
             <div class="stat-title">
-              <span>Tension</span>
+              <span>Tension Romantico/Erotica</span>
             </div>
             <div class="stat-info">
               <i class="fa-solid fa-heart"></i>
-              <span class="percent" id="tension-percent">50%</span>
+              <span class="percent" id="tension-percent">10%</span>
               <i class="fa-solid fa-heart"></i>
             </div>
             <div class="stat-bar">
@@ -90,13 +90,14 @@
         </div>
         <div class="overall-container">
           <h2>OVERALL</h2>
-          <h3 id="couple">Subject With Subject</h3>
+          <h3 id="couple">No hay nadie aun...</h3>
           <p class="phrase" id="phrase">
-            Lorem ipsum, dolor sit amet consectetur adipisicing
+            Escribe el nombre ti y el de el/ella
           </p>
-          <span class="overall" id="overall">80%</span>
+          <span class="overall" id="overall">10%</span>
         </div>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -51,6 +51,7 @@ header{
     text-align: center;
 }
 .stat-title{
+    text-align: center;
     margin-bottom:5px;
 }
 
@@ -83,9 +84,11 @@ header{
     text-align: center;
     gap:10px;
     padding-top:10px;
+    padding:5px;
 
-    width:fit-content;
-    max-width:300px;
+    width:300px;
+    height:fit-content;
+    min-height:150px;
     border:1px solid black;
 
 
@@ -128,6 +131,10 @@ header{
 }
 
 
+#couple{
+    color:red;
+}
+
 
 .outside{
     width:150px;
@@ -137,7 +144,7 @@ header{
     background-color:white;
 }
 .inside{
-    width:80%;
+    width:10%;
     height:15px;
     background-color:red;
     border-radius:10px;
@@ -161,7 +168,7 @@ header{
         gap:10px;
     }
     .container{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .stats{
         flex-direction: column;
