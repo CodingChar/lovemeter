@@ -90,7 +90,7 @@ let results = [
     stats: {},
     calcStats: function (){
       this.stats.love = 50
-      this.stats.chemistry = 70
+      this.stats.chemistry = 60.5
       this.stats.tension = 'x'
       this.stats.overall = 75
       this.stats.phrase = 'Puede que si o... puede que no. Intenten conocerse'
